@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #0B1F3A;
+  color: white;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: #f4f4f4;
+}
+
+.btn {
+  background: #ff6b00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 8px;
+}
+
+form input, form textarea {
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+footer {
+  background: #0B1F3A;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
