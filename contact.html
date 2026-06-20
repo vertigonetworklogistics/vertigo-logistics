@@ -1,34 +1,70 @@
-<form id="leadForm">
-  <input type="text" id="name" placeholder="Your Name" required>
-  <input type="text" id="phone" placeholder="Phone Number" required>
-  <input type="email" id="email" placeholder="Email Address" required>
-  <textarea id="message" placeholder="Tell us your logistics requirement"></textarea>
+<section class="contact-hero">
+    <h1>Let's Move Your Business Forward</h1>
+    <p>Get in touch with our logistics experts for transportation, warehousing, freight, and supply chain solutions.</p>
+</section>
 
-  <button type="submit">Send Enquiry</button>
-</form>
+<section class="contact-container">
 
-<script>
-document.getElementById("leadForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
+    <div class="contact-info">
 
-    const data = {
-        name: document.getElementById("name").value,
-        phone: document.getElementById("phone").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-    };
+        <div class="info-card">
+            <h3>📍 Office Address</h3>
+            <p>KPHB Colony, Hyderabad,<br>
+            Telangana – 500072</p>
+        </div>
 
-    try {
-        await fetch("https://script.google.com/macros/s/AKfycbxjyNDhdwsWdzMtVlWg0De-dPVr9re162Gyjpj-5PimmxgPUydh5hwWt1ln4QdboXiQdg/exec", {
-            method: "POST",
-            body: JSON.stringify(data)
-        });
+        <div class="info-card">
+            <h3>📞 Call Us</h3>
+            <p>+91 9136144490</p>
+            <p>+91 8886668341</p>
+        </div>
 
-        alert("Thank you! Your enquiry has been submitted.");
-        document.getElementById("leadForm").reset();
+        <div class="info-card">
+            <h3>📧 Email</h3>
+            <p>sales@vertigologistic.com</p>
+        </div>
 
-    } catch (error) {
-        alert("Submission failed. Please try again.");
-    }
-});
-</script>
+        <div class="info-card">
+            <h3>💬 Quick Connect</h3>
+            <a class="whatsapp-btn"
+               href="https://wa.me/919136144490"
+               target="_blank">
+               WhatsApp Us
+            </a>
+        </div>
+
+    </div>
+
+    <div class="contact-form">
+
+        <h2>Request A Quote</h2>
+
+        <form id="leadForm">
+
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <input type="text" id="phone" placeholder="Phone Number" required>
+
+            <input type="email" id="email" placeholder="Email Address" required>
+
+            <textarea id="message"
+            placeholder="Describe your logistics requirement"></textarea>
+
+            <button type="submit">
+                Submit Enquiry
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<section class="map-section">
+    <h2>Our Location</h2>
+
+    <iframe
+    src="https://www.google.com/maps?q=KPHB%20Colony%20Hyderabad&output=embed"
+    loading="lazy">
+    </iframe>
+</section>
