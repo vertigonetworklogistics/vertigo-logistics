@@ -436,12 +436,32 @@ nav{
     border-top:3px dashed #fff;
 }
 
-/* TRUCK */
 .truck{
     position:absolute;
     bottom:10px;
     font-size:38px;
     animation:truckMove 7s linear infinite;
+}
+
+@keyframes truckMove{
+    0%{
+        left:-100px;
+        transform:translateY(0);
+    }
+    25%{
+        transform:translateY(-2px);
+    }
+    50%{
+        transform:translateY(0);
+    }
+    75%{
+        transform:translateY(-2px);
+    }
+    100%{
+        left:110%;
+        transform:translateY(0);
+    }
+}
 }
 
 @keyframes truckMove{
