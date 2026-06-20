@@ -191,4 +191,21 @@ font-weight:600;
 background:white;
 color:#0b2d4d;
 }
+.quote-banner{
+    background:linear-gradient(135deg,#0b2d4d,#134a7c);
+    color:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.info-card a{
+    color:#0b2d4d;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.info-card a:hover{
+    color:#134a7c;
+}
 }
