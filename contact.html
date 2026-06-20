@@ -1,9 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Vertigo Network Logistics Pvt Ltd</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        Vertigo Network Logistics Pvt Ltd
+    </div>
+
+```
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+```
+
+</header>
+
 <section class="contact-hero">
     <h1>Let's Move Your Business Forward</h1>
-    <p>
-        Get in touch with our logistics experts for transportation,
-        warehousing, freight, and supply chain solutions.
-    </p>
+
+```
+<p>
+    Get in touch with our logistics experts for transportation,
+    warehousing, freight and supply chain solutions.
+</p>
+```
+
 </section>
 
 <section class="contact-container">
@@ -13,6 +48,7 @@
 
     <div class="info-card">
         <h3>📍 Office Address</h3>
+
         <p>
             KPHB Colony, Hyderabad<br>
             Telangana – 500072
@@ -36,7 +72,7 @@
     </div>
 
     <div class="info-card">
-        <h3>📧 Email</h3>
+        <h3>📧 Email Us</h3>
 
         <p>
             <a href="mailto:sales@vertigologistic.com">
@@ -46,12 +82,12 @@
     </div>
 
     <div class="info-card">
-        <h3>💬 Quick Connect</h3>
+        <h3>💬 WhatsApp</h3>
 
         <a class="whatsapp-btn"
            href="https://wa.me/919136144490"
            target="_blank">
-           WhatsApp Us
+           Chat on WhatsApp
         </a>
     </div>
 
@@ -60,35 +96,39 @@
 <div class="contact-form">
 
     <div class="quote-banner">
-        <h3>🚚 Fast Logistics Solutions</h3>
+        <h3>🚚 Request A Logistics Quote</h3>
 
         <p>
-            Get a customized quote for transportation,
-            warehousing and supply chain services.
+            Tell us your transportation or warehousing requirement
+            and our team will get back to you.
         </p>
     </div>
 
-    <h2>Request A Quote</h2>
+    <h2>Submit Enquiry</h2>
 
     <form id="leadForm">
 
-        <input type="text"
-               id="name"
-               placeholder="Your Name"
-               required>
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required>
 
-        <input type="text"
-               id="phone"
-               placeholder="Phone Number"
-               required>
+        <input
+            type="text"
+            id="phone"
+            placeholder="Phone Number"
+            required>
 
-        <input type="email"
-               id="email"
-               placeholder="Email Address"
-               required>
+        <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required>
 
-        <textarea id="message"
-                  placeholder="Describe your logistics requirement"></textarea>
+        <textarea
+            id="message"
+            placeholder="Describe your logistics requirement"></textarea>
 
         <button type="submit">
             Submit Enquiry
@@ -114,8 +154,13 @@
 
 </section>
 
+<footer>
+    © 2026 Vertigo Network Logistics Pvt Ltd. All Rights Reserved.
+</footer>
+
 <script>
-document.getElementById("leadForm").addEventListener("submit", async function(e) {
+
+document.getElementById("leadForm").addEventListener("submit", function(e){
 
     e.preventDefault();
 
@@ -126,28 +171,33 @@ document.getElementById("leadForm").addEventListener("submit", async function(e)
         message: document.getElementById("message").value
     };
 
-    try {
+    fetch(
+    "https://script.google.com/macros/s/AKfycbwsrAffnoGvScsH-WgwKOxwdYAmyy2WVpHEQ0eNMUZyWsMNiEXyZQTEggleCyCLAAGZgA/exec",
+    {
+        method:"POST",
+        mode:"no-cors",
+        body:JSON.stringify(data)
+    })
+    .then(() => {
 
-        await fetch(
-        "https://script.google.com/macros/s/AKfycbwsrAffnoGvScsH-WgwKOxwdYAmyy2WVpHEQ0eNMUZyWsMNiEXyZQTEggleCyCLAAGZgA/exec",
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
-
-        alert("Thank you! Your enquiry has been submitted successfully.");
+        alert("Thank you! Your enquiry has been submitted.");
 
         document.getElementById("leadForm").reset();
 
-    } catch(error) {
+    })
+    .catch(error => {
 
-        alert("Submission failed. Please try again.");
+        console.error(error);
 
-    }
+        alert("Submission failed.");
+
+    });
 
 });
+
 </script>
 
+</body>
+</html>
+
+    
