@@ -1,70 +1,150 @@
 <section class="contact-hero">
     <h1>Let's Move Your Business Forward</h1>
-    <p>Get in touch with our logistics experts for transportation, warehousing, freight, and supply chain solutions.</p>
+    <p>
+        Get in touch with our logistics experts for transportation,
+        warehousing, freight, and supply chain solutions.
+    </p>
 </section>
 
 <section class="contact-container">
 
-    <div class="contact-info">
+```
+<div class="contact-info">
 
-        <div class="info-card">
-            <h3>📍 Office Address</h3>
-            <p>KPHB Colony, Hyderabad,<br>
-            Telangana – 500072</p>
-        </div>
+    <div class="info-card">
+        <h3>📍 Office Address</h3>
+        <p>
+            KPHB Colony, Hyderabad<br>
+            Telangana – 500072
+        </p>
+    </div>
 
-        <div class="info-card">
-            <h3>📞 Call Us</h3>
-            <p>+91 9136144490</p>
-            <p>+91 8886668341</p>
-        </div>
+    <div class="info-card">
+        <h3>📞 Call Us</h3>
 
-        <div class="info-card">
-            <h3>📧 Email</h3>
-            <p>sales@vertigologistic.com</p>
-        </div>
-
-        <div class="info-card">
-            <h3>💬 Quick Connect</h3>
-            <a class="whatsapp-btn"
-               href="https://wa.me/919136144490"
-               target="_blank">
-               WhatsApp Us
+        <p>
+            <a href="tel:+919136144490">
+                +91 9136144490
             </a>
-        </div>
+        </p>
 
+        <p>
+            <a href="tel:+918886668341">
+                +91 8886668341
+            </a>
+        </p>
     </div>
 
-    <div class="contact-form">
+    <div class="info-card">
+        <h3>📧 Email</h3>
 
-        <h2>Request A Quote</h2>
-
-        <form id="leadForm">
-
-            <input type="text" id="name" placeholder="Your Name" required>
-
-            <input type="text" id="phone" placeholder="Phone Number" required>
-
-            <input type="email" id="email" placeholder="Email Address" required>
-
-            <textarea id="message"
-            placeholder="Describe your logistics requirement"></textarea>
-
-            <button type="submit">
-                Submit Enquiry
-            </button>
-
-        </form>
-
+        <p>
+            <a href="mailto:sales@vertigologistic.com">
+                sales@vertigologistic.com
+            </a>
+        </p>
     </div>
+
+    <div class="info-card">
+        <h3>💬 Quick Connect</h3>
+
+        <a class="whatsapp-btn"
+           href="https://wa.me/919136144490"
+           target="_blank">
+           WhatsApp Us
+        </a>
+    </div>
+
+</div>
+
+<div class="contact-form">
+
+    <div class="quote-banner">
+        <h3>🚚 Fast Logistics Solutions</h3>
+
+        <p>
+            Get a customized quote for transportation,
+            warehousing and supply chain services.
+        </p>
+    </div>
+
+    <h2>Request A Quote</h2>
+
+    <form id="leadForm">
+
+        <input type="text"
+               id="name"
+               placeholder="Your Name"
+               required>
+
+        <input type="text"
+               id="phone"
+               placeholder="Phone Number"
+               required>
+
+        <input type="email"
+               id="email"
+               placeholder="Email Address"
+               required>
+
+        <textarea id="message"
+                  placeholder="Describe your logistics requirement"></textarea>
+
+        <button type="submit">
+            Submit Enquiry
+        </button>
+
+    </form>
+
+</div>
+```
 
 </section>
 
 <section class="map-section">
-    <h2>Our Location</h2>
 
-    <iframe
-    src="https://www.google.com/maps?q=KPHB%20Colony%20Hyderabad&output=embed"
-    loading="lazy">
-    </iframe>
+```
+<h2>Our Location</h2>
+
+<iframe
+src="https://www.google.com/maps?q=KPHB%20Colony%20Hyderabad&output=embed"
+loading="lazy">
+</iframe>
+```
+
 </section>
+
+<script>
+document.getElementById("leadForm").addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const data = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    try {
+
+        await fetch(
+        "https://script.google.com/macros/s/AKfycbxjyNDhdwsWdzMtVlWg0De-dPVr9re162Gyjpj-5PimmxgPUydh5hwWt1ln4QdboXiQdg/exec",
+        {
+            method: "POST",
+            body: JSON.stringify(data)
+        });
+
+        alert("Thank you! Your enquiry has been submitted.");
+
+        document.getElementById("leadForm").reset();
+
+    } catch(error) {
+
+        alert("Submission failed. Please try again.");
+
+    }
+
+});
+</script>
+
