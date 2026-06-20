@@ -317,8 +317,10 @@ nav{
 .contact-container{
     grid-template-columns:1fr;
 }
+
+}
 /* =========================
-   FIX: ULTRA LOGISTICS ANIMATION
+   ULTRA LOGISTICS ANIMATION (FIXED)
 ========================= */
 
 .logistics-stage{
@@ -445,7 +447,6 @@ nav{
 @keyframes truckMove{
     0%{ left:-80px; }
     100%{ left:110%; }
-}
 }
 
 
