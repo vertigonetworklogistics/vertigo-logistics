@@ -304,29 +304,6 @@ footer{
     padding:25px;
 }
 
-/* SOCIAL LINKS (FIXED - WORKS DESKTOP + MOBILE) */
-
-.social-links{
-    display:flex;
-    gap:15px;
-    margin-top:20px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.social-links a{
-    color:white;
-    text-decoration:none;
-    padding:10px 15px;
-    background:rgba(255,255,255,0.1);
-    border-radius:8px;
-    transition:0.3s;
-}
-
-.social-links a:hover{
-    background:#00c2ff;
-}
-
 /* MOBILE */
 
 @media(max-width:768px){
@@ -360,6 +337,26 @@ nav{
 
 .contact-hero h1{
     font-size:34px;
+}
+   .social-links{
+display:flex;
+gap:15px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.social-links a{
+color: white;
+text-decoration:none;
+padding:10px 15px;
+background:rgba(255,255,255,0.1);
+border-radius:8px;
+transition:0.3s;
+}
+
+.social-links a:hover{
+background:#00c2ff;
+}
 }
 
 }
