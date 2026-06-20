@@ -107,8 +107,8 @@
 <h2>Our Location</h2>
 
 <iframe
-src="https://www.google.com/maps?q=KPHB%20Colony%20Hyderabad&output=embed"
-loading="lazy">
+    src="https://www.google.com/maps?q=KPHB%20Colony%20Hyderabad&output=embed"
+    loading="lazy">
 </iframe>
 ```
 
@@ -132,10 +132,13 @@ document.getElementById("leadForm").addEventListener("submit", async function(e)
         "https://script.google.com/macros/s/AKfycbxjyNDhdwsWdzMtVlWg0De-dPVr9re162Gyjpj-5PimmxgPUydh5hwWt1ln4QdboXiQdg/exec",
         {
             method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify(data)
         });
 
-        alert("Thank you! Your enquiry has been submitted.");
+        alert("Thank you! Your enquiry has been submitted successfully.");
 
         document.getElementById("leadForm").reset();
 
