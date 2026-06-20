@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vertigonetworklogistics.github.io/vertigo-logistics/sitemap.xml
